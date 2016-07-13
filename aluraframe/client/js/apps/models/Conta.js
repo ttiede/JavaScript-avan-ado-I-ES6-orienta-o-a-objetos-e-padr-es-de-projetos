@@ -2,8 +2,8 @@ class Conta {
 
     constructor(titular, conta) {
 
-        this.titular = titular;
-        this.conta = conta;
+        this._titular = titular;
+        this._conta = conta;
         this._saldo = 0.0
     }
 
@@ -12,7 +12,15 @@ class Conta {
         this._saldo+=valor;
     }
 
-    get Saldo() {
+    get saldo() {
         return this._saldo;
+    }
+
+    get titular() {
+        return this._titular;
+    }
+
+    get conta() {
+        return this._conta;
     }
 }
