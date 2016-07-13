@@ -2,6 +2,7 @@ class ContadorController {
 
     constructor() {
         this._contador = 0;
+        this._elemento = document.querySelector('#p1'); // busca uma única vez
         alert(this._contador);
     }
 
@@ -9,7 +10,8 @@ class ContadorController {
         return this._contador;
     }
 
-    incrementar() {
+    incrementa() {
         this._contador++;
-        alert(this._contador);
+        this._elemento.textContent = this._contador; // não precisa buscar o elemento, já temos uma referência para ele
     }
+}
